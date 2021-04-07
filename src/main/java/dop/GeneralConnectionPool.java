@@ -42,11 +42,11 @@ public void init(String nameFileProperty) throws DaoException {
         if (databaseConnection != null) {
                 if (freePool.size() < maxQuantity) {
                 freePool.push(databaseConnection);
-                System.out.println("over_2");
+               // System.out.println("over_2");
             } else {
                 try {
                     databaseConnection.getConnection().close();
-                    System.out.println("over_3");
+                 //   System.out.println("over_3");
                 } catch (SQLException e) {
                     throw new DaoException("Ошибка закрытия");
                 }
