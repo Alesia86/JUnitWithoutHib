@@ -294,50 +294,6 @@ public class StudentService implements StudentDAO {
         return listStudent;
     }
 
-    /*@Override
-    public Collection<Student> readAll() throws DaoException {
-        ArrayList<Student> listStudent = new ArrayList<>();
-        ResultSet resultset = null;
-        Statement statement = null;
-        String sqlQuery = "SELECT ID, FIRST_NAME, SECOND_NAME, BIRTH_DAY,ENTER_YEAR FROM STUDENT";
-        try {
-            statement = connect.createStatement();
-            resultset = statement.executeQuery(sqlQuery);
-
-            while (resultset.next()) {
-                Student student = new Student();
-                student.setId(resultset.getInt(1));
-                student.setFirstName(resultset.getString(2));
-                student.setSecondName(resultset.getString(3));
-                student.setBirthDay(resultset.getDate(4));
-                student.setEnterYear(resultset.getInt(5));
-                listStudent.add(student);
-            }
-        } catch (SQLException e) {
-            throw new DaoException(e);
-        } finally {
-            if (resultset != null) {
-                try {
-                    resultset.close();
-                    System.out.println("ResuitSet is closed");
-                } catch (Exception e) {
-                    throw new DaoException("Error Statement is closed",e);
-                }
-                if (statement != null) {
-                    try {
-                        statement.close();
-                        System.out.println("Statement is closed");
-                    } catch (Exception e) {
-                        throw new DaoException("Error Statement is closed",e);
-                    }
-                }
-
-            }
-
-        }
-        return listStudent;
-    }*/
-
     @Override
     public void updateStudent(Connection connect, Student student) throws DaoException {
 

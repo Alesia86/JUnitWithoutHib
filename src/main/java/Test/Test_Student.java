@@ -28,26 +28,7 @@ public void getGeneralPool() throws DaoException {
     } catch (DaoException e) {
         e.printStackTrace();
     }
-    /*Connection connection=null;
-    Statement statement=null;
-    String sqlQueryDelete = "DELETE FROM STUDENT";
-    try {
-        connection=generalConnectionPool.getConnection();
-        statement = connection.createStatement();
-        statement.executeUpdate(sqlQueryDelete);
-    } catch (SQLException  e) {
-        e.printStackTrace();
-    }
-    finally {
-        try {
-            statement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        finally {
-            generalConnectionPool.returnConnection((DatabaseConnection) connection);
-        }
-    }*/
+    
 
 }
 @BeforeMethod
