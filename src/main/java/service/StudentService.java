@@ -348,7 +348,6 @@ public class StudentService implements StudentDAO {
                 preparedStatementUpdate.setInt(4, student.getEnterYear());
                 preparedStatementUpdate.setInt(5, student.getId());
                 preparedStatementUpdate.executeUpdate();
-                daoConnection.isClose(connect);
             } catch (SQLException e) {
                 System.out.println("Проверьте правильность введенных данных");
                 throw new DaoException("Error update", e);
